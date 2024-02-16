@@ -33,3 +33,10 @@ button {
 button:hover {
     background-color: #4183bd;
 }
+h1 {
+	color: green;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    border-bottom: solid 5px #261f1f;
+}
