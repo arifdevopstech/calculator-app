@@ -27,21 +27,21 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred1', toolName: 'docker') {
-                        sh 'docker build -t ari786/calculator:v1.0 .'
+                        sh 'docker build -t ari786/calculator:v2.0 .'
                     }
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
-                sh 'trivy image ari786/calculator:v1.0 > trivy-calcimage-scan.txt'
+                sh 'trivy image ari786/calculator:v2.0 > trivy-calcimage-scan.txt'
             }
         }
         stage('Docker Push') {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred1', toolName: 'docker') {
-                        sh 'docker push ari786/calculator:v1.0'
+                        sh 'docker push ari786/calculator:v2.0'
                     }
                 }
             }

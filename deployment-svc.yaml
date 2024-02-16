@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: calculator-app
-          image: ari786/calculator:v1.0
+          image: ari786/calculator:v2.0
           ports:
             - containerPort: 80
 
