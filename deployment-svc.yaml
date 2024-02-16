@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: calculator-app
-  app: web
+  app: calc-web
   namespace: webapps
 spec:
   selector:
