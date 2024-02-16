@@ -46,7 +46,7 @@ pipeline {
                 }
             }
         }
-        stage('Hello') {
+        stage('Application Deploy') {
             steps {
                 script {
                     withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://192.168.1.200:6443') {
