@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git 'https://github.com/arifsadiq/calculator-app.git'
+                git 'https://github.com/arifdevopstech/calculator-app.git'
             }
         }
         stage('Trivy Filesystem Scan') {
